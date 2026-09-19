@@ -7,7 +7,7 @@ st.set_page_config(
 
 # --- リンク設定 ---
 SQUARE_URL = "https://book.squareup.com/appointments/2ucwqsu1n3gd92/location/NTCS8DNYBQTPS/services"
-LINE_URL = "https://line.me/R/ti/p/@YOUR_LINE_ID"  # ※ご自身のLINE公式アカウントの友だち追加URLに書き換えてください
+LINE_URL = "https://lin.ee/NC5Kp1j"
 
 
 # --- UI表示 ---
@@ -96,25 +96,20 @@ if st.button("✨ おすすめコースを診断する", type="primary", use_con
             unsafe_allow_html=True,
         )
 
-        if LINE_URL and "YOUR_LINE_ID" not in LINE_URL:
-            st.markdown(
-                f"""
-                <a href="{LINE_URL}" target="_blank" style="
-                    display: block;
-                    width: 100%;
-                    padding: 14px;
-                    background-color: #06C755;
-                    color: white;
-                    text-align: center;
-                    font-size: 16px;
-                    font-weight: bold;
-                    border-radius: 8px;
-                    text-decoration: none;
-                ">💬 公式LINE登録でお得なクーポンを取得する ➔</a>
-                """,
-                unsafe_allow_html=True,
-            )
-        else:
-            st.info(
-                "💡 公式LINEにご登録いただくと、初回限定のお得な割引クーポンが取得できます！"
-            )
+        st.markdown(
+            f"""
+            <a href="{LINE_URL}" target="_blank" style="
+                display: block;
+                width: 100%;
+                padding: 14px;
+                background-color: #06C755;
+                color: white;
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 8px;
+                text-decoration: none;
+            ">💬 公式LINE登録でお得なクーポンを取得する ➔</a>
+            """,
+            unsafe_allow_html=True,
+        )
